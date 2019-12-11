@@ -79,5 +79,3 @@ class PluginGitlistIndex extends CommonDBTM {
     }
 }
 ?>
-
-
