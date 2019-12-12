@@ -7,4 +7,4 @@ El plugin agrega una tabla a Glpi para poder ver los ticket enlazados con dichos
 
 ## Screenshots
 
-<p align="left"><img src="css/formulario.png"></p>
+<p align="left"><img src="img/img1.png"></p>

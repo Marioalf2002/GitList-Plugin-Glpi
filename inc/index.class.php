@@ -27,7 +27,7 @@ class PluginGitlistIndex extends CommonDBTM {
      * Show the form (menu->plugin->gitlist)
     */
     public function formIndex() {
-        echo '<div class="tab_cadre_fixe" style="box-shadow: 0 1px 20px #aaa;text-align:center;padding:3em;">';
+        echo '<div class="tab_cadre_fixe" style="box-shadow: 0 1px 15px #aaa;text-align:center;padding:3em;">';
 
         echo "<p align='center'><a href='../gitlist/'><img src='../gitlist/logo/horizontal.png' alt='gitlist' height='100px'></a></p><br>";
 
