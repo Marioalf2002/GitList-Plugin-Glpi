@@ -10,13 +10,12 @@
     <div class="repository">
         <div class="repository-header">
             <span class="fa fa-folder-open"></span>  <a href="{{ path('repository', {repo: repository.name}) }}">{{ repository.name }}</a>
-            <a href="{{ path('rss', {repo: repository.name, branch: 'master'}) }}"><span class="fa fa-rss rss-icon pull-right"></span></a>
         </div>
         <div class="repository-body">
             {% if repository.description %}
             <p>{{ repository.description }}</p>
             {% else %}
-            <p>There is no repository description file. Please, create one to remove this message.</p>
+            <p>No hay archivo de descripción del repositorio. Por favor, cree uno para eliminar este mensaje.</p>
             {% endif %}
         </div>
     </div>

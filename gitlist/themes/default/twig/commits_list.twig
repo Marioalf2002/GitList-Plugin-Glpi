@@ -14,9 +14,9 @@
                 <span class="pull-right"><a class="btn btn-small" href="{{ path('commit', {repo: repo, commit: item.hash}) }}"><i class="icon-list-alt"></i> View {{ item.shortHash }}</a></span>
                 <h4>{{ item.message }}</h4>
                 <span>
-                    <a href="mailto:{{ item.author.email }}">{{ item.author.name }}</a> authored on {{ item.date | format_date }}
+                    <a href="mailto:{{ item.author.email }}">{{ item.author.name }}</a> escrito el {{ item.date | format_date }}
                     {% if item.author.email != item.commiter.email %}
-                    &bull; <a href="mailto:{{ item.commiter.email }}">{{ item.commiter.name }}</a> committed on {{ item.commiterDate | format_date }}
+                    &bull; <a href="mailto:{{ item.commiter.email }}">{{ item.commiter.name }}</a> compartido el {{ item.commiterDate | format_date }}
                     {% endif %}
                 </span>
             </td>
@@ -26,19 +26,19 @@
 </table>
 {% endfor %}
 {% else %}
-<p>No results found.</p>
+<p>No se han encontrado resultados.</p>
 {% endif %}
 
 {% if page != 'searchcommits' %}
 <ul class="pager">
     {% if pager.current != 0 %}
     <li class="previous">
-        <a href="?page={{ pager.previous }}">&larr; Newer</a>
+        <a href="?page={{ pager.previous }}">&larr; Más nuevo</a>
     </li>
     {% endif %}
     {% if pager.current != pager.last %}
     <li class="next">
-        <a href="?page={{ pager.next }}">Older &rarr;</a>
+        <a href="?page={{ pager.next }}">Más viejo &rarr;</a>
     </li>
     {% endif %}
 </ul>

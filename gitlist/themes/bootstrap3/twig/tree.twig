@@ -7,18 +7,6 @@
 {% block content %}
     {% embed 'breadcrumb.twig' with {breadcrumbs: breadcrumbs} %}
         {% block extra %}
-            <div class="pull-right">
-                <div class="btn-group download-buttons">
-                    {% if show_http_remote or show_ssh_remote %}
-                    <a type="button" href="#" class="btn btn-default btn-xs" title="Show remotes to clone this repository." id="clone-button-show">Clone</a>
-                    {% endif %}
-                    <a type="button" href="{{ path('archive', {repo: repo, branch: branch, format: 'zip'}) }}" class="btn btn-default btn-xs" title="Download '{{ branch }}' as a ZIP archive">ZIP</a>
-                    <a type="button" href="{{ path('archive', {repo: repo, branch: branch, format: 'tar'}) }}" class="btn btn-default btn-xs" title="Download '{{ branch }}' as a TAR archive">TAR</a>
-                </div>
-		        <div class="download-buttons rss-button">
-		            <a href="{{ path('rss', {repo: repo, branch: branch}) }}"><span class="fa fa-rss rss-icon"></span></a>
-		        </div>
-            </div>
             {% if show_http_remote or show_ssh_remote %}
             <div id="clone-popup">
                 <div id="clone-popup-inner-wrapper">
@@ -67,9 +55,9 @@
     <table class="table tree">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Mode</th>
-                <th>Size</th>
+                <th>Nombre</th>
+                <th>Modo</th>
+                <th>Tamaño</th>
             </tr>
         </thead>
         <tbody>
@@ -103,7 +91,7 @@
     </table>
     </div>
     {% else %}
-        <p>This repository is empty.</p>
+        <p>Este repositorio está vacío.</p>
     {% endif %}
     {% if readme is defined and readme is not empty %}
         <div class="readme-view">

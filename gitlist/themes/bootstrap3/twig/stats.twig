@@ -11,9 +11,9 @@
         <table class="table stats">
             <thead>
                 <tr>
-                    <th width="30%"><span class="fa fa-file-text"></span> File extensions ({{ stats.extensions|length }})</th>
-                    <th width="40%"><span class="fa fa-users"></span> Authors ({{ authors|length }})</th>
-                    <th width="30%"><span class="fa fa-star"></span> Other</th>
+                    <th width="30%"><span class="fa fa-file-text"></span> Extensiones de archivo ({{ stats.extensions|length }})</th>
+                    <th width="40%"><span class="fa fa-users"></span> Autores ({{ authors|length }})</th>
+                    <th width="30%"><span class="fa fa-star"></span> Otros</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                     <td>
                         <ul>
                         {% for ext, amount in stats.extensions %}
-                            <li><strong>{{ ext }}</strong>: {{ amount }} files</li>
+                            <li><strong>{{ ext }}</strong>: {{ amount }} Archivos</li>
                         {% endfor %}
                         </ul>
                     </td>
@@ -34,7 +34,7 @@
                     </td>
                     <td>
                         <p>
-                            <strong>Total files:</strong> {{ stats.files }}
+                            <strong>Total Archivos:</strong> {{ stats.files }}
                         </p>
      
                         <p>
@@ -46,17 +46,17 @@
         </table>
     </div>
     <div class="panel panel-default visible-xs">
-        <div class="panel-heading bold"><span class="fa fa-file-text"></span> File extensions ({{ stats.extensions|length }})</div>
+        <div class="panel-heading bold"><span class="fa fa-file-text"></span> Extensiones de archivo ({{ stats.extensions|length }})</div>
         <div class="panel-body">
             <ul>
             {% for ext, amount in stats.extensions %}
-                <li><strong>{{ ext }}</strong>: {{ amount }} files</li>
+                <li><strong>{{ ext }}</strong>: {{ amount }} Archivos</li>
             {% endfor %}
             </ul>
         </div>
     </div>
     <div class="panel panel-default visible-xs">
-        <div class="panel-heading bold"><span class="fa fa-users"></span> Authors ({{ authors|length }})</div>
+        <div class="panel-heading bold"><span class="fa fa-users"></span> Autores ({{ authors|length }})</div>
         <div class="panel-body">
             <ul>
             {% for author in authors %}
@@ -66,10 +66,10 @@
         </div>
     </div>
     <div class="panel panel-default visible-xs">
-        <div class="panel-heading bold"><span class="fa fa-star"></span> Other</div>
+        <div class="panel-heading bold"><span class="fa fa-star"></span> Otros</div>
         <div class="panel-body">
             <p>
-                <strong>Total files:</strong> {{ stats.files }}
+                <strong>Total Archivos:</strong> {{ stats.files }}
             </p>
      	    
             <p>

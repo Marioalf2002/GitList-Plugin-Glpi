@@ -8,10 +8,9 @@
 {% include 'breadcrumb.twig' with {breadcrumbs: [{dir: "Commit #{commit.hash}", path:''}]} %}
 
 {# Incio Formulario para enlace de commit #}
-    <!-- Cambiar URL por localizacion donde se encuentre su archivo commit.php -->
     <hr>
-    <div id="formulario2">
-        <form action="http://localhost/gitlist/conexion/commit.php" method="post" autocomplete="off">
+    <div id="commit">
+        <form action="../../Conexion/commit.php" method="post" autocomplete="off">
             <p>
                 Este campo es para enlazar el Commit que esta en vista con un Ticket.
             </p>
@@ -29,7 +28,7 @@
 <div class="commit-view">
     <div class="commit-header">
         <span class="pull-right"><a class="btn btn-small" href="{{ path('branch', {repo: repo, branch: commit.hash}) }}"
-                title="Browse code at this point in history"><i class="icon-list-alt"></i> Browse code</a></span>
+                title="Browse code at this point in history"><i class="icon-list-alt"></i> Ver Contenido</a></span>
         <h4>{{ commit.message }}</h4>
     </div>
     <div class="commit-body">
@@ -38,13 +37,13 @@
         {% endif %}
         <img src="{{ avatar(commit.author.email, 32) }}" class="pull-left space-right" />
         <span>
-            <a href="mailto:{{ commit.author.email }}">{{ commit.author.name }}</a> authored on
+            <a href="mailto:{{ commit.author.email }}">{{ commit.author.name }}</a> escrito el
             {{ commit.date | format_date }}
             {% if commit.author.email != commit.commiter.email %}
-            &bull; <a href="mailto:{{ commit.commiter.email }}">{{ commit.commiter.name }}</a> committed on
+            &bull; <a href="mailto:{{ commit.commiter.email }}">{{ commit.commiter.name }}</a> compartido el
             {{ commit.commiterDate | format_date }}
             {% endif %}
-            <br />Showing {{ commit.changedFiles }} changed files
+            <br />Mostrando {{ commit.changedFiles }} archivos modificados
         </span>
     </div>
 </div>
@@ -63,9 +62,9 @@
 
         <div class="btn-group pull-right">
             <a href="{{ path('commits', {repo: repo, commitishPath: commit.hash ~ '/' ~ diff.file}) }}"
-                class="btn btn-small"><i class="icon-list-alt"></i> History</a>
+                class="btn btn-small"><i class="icon-list-alt"></i> Historia</a>
             <a href="{{ path('blob', {repo: repo, commitishPath: commit.hash ~'/' ~ diff.file}) }}"
-                class="btn btn-small"><i class="icon-file"></i> View file @ {{ commit.shortHash }}</a>
+                class="btn btn-small"><i class="icon-file"></i> Ver archivo @ {{ commit.shortHash }}</a>
         </div>
     </div>
 

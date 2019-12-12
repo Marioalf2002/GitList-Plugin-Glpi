@@ -209,7 +209,7 @@
 		 */
 		that.setCommit = function( commit ) {
 			setAuthor( commit.author );
-			dateDisplay.html( ' authored on ' + getDateString( commit.date ) );
+			dateDisplay.html( ' escrito el ' + getDateString( commit.date ) );
 			messageDisplay.html( commit.message );
 			return that;
 		};

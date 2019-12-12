@@ -108,3 +108,6 @@ Todos los archivos mencionados se encuentran en la carpeta `Conexion/`:
 ## Screenshots
 
 <p align="left"><img src="Conexion/css/formulario.png"></p>
+
+## Importante
+Si llegas hacer cambios en la interfaces de GitList asegurate de borrar el contenido de la carpeta `Cache/` o active la opcion Debug en `config.ini`, para que los cambios se visualicen.

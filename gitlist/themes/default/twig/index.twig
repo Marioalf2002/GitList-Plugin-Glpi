@@ -1,5 +1,5 @@
 {% extends 'layout.twig' %}
-{% block title %}GitList | {{repo}}{% endblock %}
+{% block title %}GitList{% endblock %}
 
 {% block body %}
 {% include 'navigation.twig' %}
@@ -20,7 +20,7 @@
                 {% if repository.description %}
                 <p>{{ repository.description }}</p>
                 {% else %}
-                <p>There is no repository description file. Please, create one to remove this message.</p>
+                <p>No hay archivo de descripción del repositorio. Por favor, cree uno para eliminar este mensaje.</p>
                 {% endif %}
             </div>
         </div>
